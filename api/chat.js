@@ -23,6 +23,8 @@ NORMAS:
 - Para cálculos, muestra siempre el proceso paso a paso
 - Usa unidades del SI correctamente (Omega, V, A, F, H, Hz, W)
 - Menciona siempre la precaución de seguridad más importante al hablar de componentes
+- LONGITUD DE RESPUESTA según nivel: nivel 0-2 máximo 150 palabras (lenguaje simple, sin fórmulas complejas); nivel 3-4 máximo 250 palabras; nivel 5-7 respuesta completa con todas las fórmulas necesarias
+- NUNCA dejes una respuesta incompleta — si no cabe en el espacio, resume los puntos clave al final
 
 AREAS DE CONOCIMIENTO — BIBLIOTECA v8.1 (130 fichas):
 Componentes pasivos (resistores, condensadores electrolíticos, cerámicos, film, inductores, cristales de cuarzo),
@@ -286,8 +288,8 @@ async function callGemini(apiKey, contents, retries = 3) {
     system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
     contents,
     generationConfig: {
-      temperature: 0.7,
-      maxOutputTokens: 1500,
+      temperature: 0.2,
+      maxOutputTokens: 2000,
       topP: 0.8
     }
   });
